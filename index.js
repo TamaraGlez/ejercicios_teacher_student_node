@@ -7,9 +7,13 @@ const db = require("./src/utils/db"); /* -> importar db */
 db.connectDB(); /* -> utilizamos la función que me conecta con la base de datos de nuestro archivo db */
 
 // All Routes imports -> para luego poder utilizarlas en nuestro servidor
-const indexRoutes = require("./src/api/index/index.routes");
+
 const teachersRoutes = require("./src/api/teachers/teacher.routes");
 const studentsRoutes = require("./src/api/students/student.routes");
+const courseBlocksRoutes = require('./src/api/courseBlocks/courseBlock.routes');
+const indexRoutes = require("./src/api/index/index.routes");
+
+
 // declaramos el puerto en el que se levantará nuestro servidor
 const PORT = 8080;
 
@@ -29,6 +33,7 @@ server.use(express.urlencoded({ extended: true }));
 server.use("/teachers", teachersRoutes);
 server.use("/students", studentsRoutes);
 // server.use("/students", studentsRoutes);
+server.use("/course-blocks", courseBlocksRoutes);
 server.use("/", indexRoutes);
 
 // Por aquí pasarán todas las rutas que no existan.

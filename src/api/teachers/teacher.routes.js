@@ -8,7 +8,6 @@ router.get("/", controller.indexGet);
 
 // ruta: /teachers/63c588039298264dbf1567a5
 router.get("/:id", controller.getById);
-
 router.get("/getbyname/:name", controller.getByName);
 
 // ruta: /teachers/create
