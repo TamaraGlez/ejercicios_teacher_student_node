@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
-const controller = require("")
 
-const studentShema = new mongoose.Schema(
+const studentSchema = new mongoose.Schema(
   {
     name: {
       type: String,
@@ -15,7 +14,7 @@ const studentShema = new mongoose.Schema(
 
     dateOfBirth: {
       date: Date,
-      required: true,
+      // required: true,
     },
 
     contactEmail: {

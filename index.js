@@ -27,6 +27,7 @@ server.use(express.urlencoded({ extended: true }));
 
 // Configuración de todas las rutas de nuestro servidor
 server.use("/teachers", teachersRoutes);
+server.use("/students", studentsRoutes);
 // server.use("/students", studentsRoutes);
 server.use("/", indexRoutes);
 
