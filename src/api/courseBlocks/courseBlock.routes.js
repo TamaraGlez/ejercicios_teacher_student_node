@@ -1,10 +1,10 @@
 // traemos express y router
 const express = require ('express');
+const controller = require('./courseBlock.controller');
+
 const router = express.Router();
 
-router.get('/',(req, res, next)=>{
-    return res.status(200).json('RUTAS DE COURSE BLOCKS FUNCIONANDO')
-});
+router.get('/', controller.indexGet);
 
 // exportamos router
 module.exports = router;
