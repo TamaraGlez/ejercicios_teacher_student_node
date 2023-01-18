@@ -10,6 +10,6 @@ router.get("/getbyname/:name", controller.getByName);
 
 router.post("/create", controller.createPost);
 
-router.put("/edit/:id", controller.deleteStudent);
+router.put("/edit/:id", controller.editPut);
 
 module.exports = router;
