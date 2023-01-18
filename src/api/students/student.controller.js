@@ -1,4 +1,3 @@
-
 const Student = require("./student.model");
 
 const indexGet = async (req, res, next) => {
